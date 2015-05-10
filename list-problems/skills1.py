@@ -1,10 +1,11 @@
-'''Write a function that takes a list (of numbers?) and returns a new list with only the odd numbers.'''
+'''Write a function that takes a list of numbers and returns a new list with only the odd numbers.'''
 
 
 def all_odd(some_list):
+    #using a for-loop
     output = []
     for item in some_list:
-        if int(item) % 2:
+        if item % 2:
             output.append(item)
     return output
 
@@ -14,10 +15,21 @@ print all_odd([1, 5, 3, 4, 8, 6, 7, 2, 3])
 print all_odd([2, 4, 6, 8])
 
 
+def all_odd2(input_list):
+    #One line solution using list comprehnsion
+    return [x for x in input_list if x % 2]
+
+print "testing all_odd2:"
+print all_odd2([1, 2, 3, 4, 5, 6, 7])
+print all_odd2([1, 5, 3, 4, 8, 6, 7, 2, 3])
+print all_odd2([2, 4, 6, 8])
+
+
 '''Write a function that takes a list and returns a new list with only the even numbers.'''
 
 
 def all_even(some_list):
+    #using for-loop
     output = []
     for item in some_list:
         if not int(item) % 2:
@@ -30,10 +42,16 @@ print all_even([1, 3, 5, 7])
 print all_even([2, 4, 6, 8])
 
 
-'''Write a function that takes a list of strings and (creates?) a new list with all strings of length 4 or greater.'''
+def all_even2(input_list):
+    #using list comprehension
+    return [x for x in input_list if not x % 2]
+
+
+'''Write a function that takes a list of strings and returns a new list with all strings of length 4 or greater.'''
 
 
 def long_words(word_list):
+    #using a for-loop
     output = []
     for word in word_list:
         if len(word) >= 4:
@@ -42,6 +60,14 @@ def long_words(word_list):
 
 print "testing long_words:"
 print long_words(['hi', 'sup?', 'yo', 'yee', 'hyphy', "f'sho"])
+
+
+def long_words2(words):
+    #using a list comprehension
+    return [word for word in words if len(word) >= 4]
+
+print "testing long_words2:"
+print long_words2(['hi', 'sup?', 'yo', 'yee', 'hyphy', "f'sho"])
 
 
 '''Write a function that finds the smallest element in a list of integers and returns it.'''
@@ -53,8 +79,6 @@ def smallest(some_list):
         if i < output:
             output = i
     return output
-
-    return output[0]
 
 print "testing smallest:"
 print smallest([1, 2, 3, 4, 5])
