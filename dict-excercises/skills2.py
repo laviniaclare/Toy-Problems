@@ -5,7 +5,7 @@ words = ["I", "do", "not", "like", "green", "eggs", "and", "ham", "I", "do", "no
 
 """
 Write a function that takes a string and produces a dictionary with
-all distinct elements as the keys, and the number of each element as
+all distinct characters as the keys, and the number of each character as
 the value
 Bonus: do the same for a file (i.e. twain.txt)
 """
@@ -13,9 +13,16 @@ Bonus: do the same for a file (i.e. twain.txt)
 
 def count_unique(string1):
     string = string1.strip()
-    pass
-print "        "
-print "What are elements? Words? Chracters?"
+    char_dict = {}
+    for char in string:
+        if char in char_dict:
+            char_dict[char] += 1
+        else:
+            char_dict[char] = 1
+    return char_dict
+
+print "Showing 'count_unique'"
+print count_unique(string1)
 
 
 """
@@ -35,8 +42,7 @@ print "                   "
 
 
 """
-Given two lists, (without using the keyword 'in' or the method 'index')
-return a list of all common items shared between both lists. This time,
+Given two lists return a list of all common items shared between both lists. This time,
 use a dictionary as part of your solution.
 """
 
