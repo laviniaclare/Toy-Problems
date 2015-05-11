@@ -108,6 +108,7 @@ print largest([-5, -3, -2])
 
 
 def halvesies(some_list):
+    #using a for-loop
     output = []
     for number in some_list:
         half = number/2.0
@@ -118,10 +119,18 @@ print "now testing halvesies:"
 print halvesies([-4, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 
 
+def halvesies2(input_list):
+    #using a list comprehension
+    return [x/2.0 for x in input_list]
+
+print "now testing halvesies2:"
+print halvesies([-4, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+
 '''Write a function that takes a list of words and returns a list of all the lengths of those words.'''
 
 
 def word_lengths(word_list):
+    #using a for-loop
     output = []
     for word in word_list:
         length = len(word)
@@ -130,6 +139,11 @@ def word_lengths(word_list):
 
 print "now testing word_lengths:"
 print word_lengths(['i', 'hi', 'bye'])
+
+
+def word_lengths2(words):
+    #using a list comprehension
+    return [len(word) for word in words]
 
 
 '''Write a function (using iteration) that sums all the numbers in a list.'''
