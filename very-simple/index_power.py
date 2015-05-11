@@ -1,4 +1,4 @@
-'''Given an array with positive numbers and a number "n" find the n-th power of the element in the array with the index n. 
+'''Given an array with positive numbers and a number "n" find the n-th power of the element in the array with the index n.
 If n is outside of the array, then return -1.
 
 Examples:
