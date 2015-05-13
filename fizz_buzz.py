@@ -15,3 +15,5 @@ def fizz_buzz(n):
             output = i
         print output
         i += 1
+
+fizz_buzz(30)
