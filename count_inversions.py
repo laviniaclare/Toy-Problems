@@ -3,11 +3,9 @@ def count_inversions(sequence):
     count = 0
     i = 0
     while i < len(sequence):
-        print i
         if sorted(sequence) == list(sequence):
             return count
         else:
-            print sequence
             count = sort(sequence, count)
         i += 1
     return count
@@ -22,6 +20,6 @@ def sort(sequence, count):
             sequence[i+1] = temp
     return count
 
-count_inversions((1, 2, 3, 5, 4))
-count_inversions((3, 2, 1))
-count_inversions((1, 2, 5, 3, 4, 7, 6))
+print count_inversions((1, 2, 3, 5, 4))
+print count_inversions((3, 2, 1))
+print count_inversions((1, 2, 5, 3, 4, 7, 6))
