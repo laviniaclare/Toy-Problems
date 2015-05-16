@@ -1,3 +1,6 @@
+'''Given an iterable, called "data", and a value, remove all instences of value in data'''
+
+
 def remove_all(data, value):
     edata = enumerate(data)
     value_indeces = []
