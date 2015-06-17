@@ -13,13 +13,12 @@ def guessing_game():
     print num
     print "Hello %s! Lets play!" % user_name
     while True:
-        guess = raw_input("I'm thinking of a number between 1 and 100.  What do you think it is?  ")
+        guess = int(raw_input("I'm thinking of a number between 1 and 100.  What do you think it is?  "))
         print guess
         if guess == num:
             print "THAT'S CORRECT!!! :)"
             break
         elif guess > num:
-            print num
             print "That number is too high.  Guess again"
         elif guess < num:
             print "That is too low.  Guess again"
