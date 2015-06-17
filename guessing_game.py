@@ -7,3 +7,7 @@ and congratulate the user before exiting the program if a user guesses correctly
 def guessing_game():
     user_name = raw_input("hello.  Welcome to my game.  What should I call you?")
     print user_name
+
+
+if __name__ == '__main__':
+    guessing_game()
