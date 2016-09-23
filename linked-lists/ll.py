@@ -15,6 +15,20 @@ class LinkedList(object):
         self.head = head
         self.tail = tail
 
+    def add_node(self, node):
+        if not self.head:
+            self.head = node
+            self.tail = node
+        else:
+            self.tail.next = node
+            self.tail = node
+
+    def print_nodes(self):
+        cur = self.head
+        while cur:
+            print cur.data
+            cur = cur.next
+
     def remove_odds(self):
         """takes in a linked list whose nodes contain integers and removes all nodes
         whose data is odd
