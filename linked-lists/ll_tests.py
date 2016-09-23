@@ -23,7 +23,14 @@ class RemoveOddsTests(unittest.TestCase):
         self.assertEqual(one_even_list.get_length(), 1)
 
     def test_tail_odd(self):
-        pass
+        odd_tail = LinkedList()
+        node_vals = [2, 3, 4, 5]
+        for node_val in node_vals:
+            odd_tail.add_node(Node(node_val))
+
+        odd_tail.remove_odds()
+        self.assertEqual(odd_tail.tail.data, 4)
+        self.assertEqual(odd_tail.get_length(), 2)
 
     def test_tail_even(self):
         pass
