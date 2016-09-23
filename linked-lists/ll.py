@@ -35,7 +35,14 @@ class LinkedList(object):
             cur = cur.next
 
     def get_length(self):
-        pass
+        length = 0
+        cur = self.head
+
+        while cur:
+            length += 1
+            cur = cur.next
+
+        return length
 
     def remove_odds(self):
         """takes in a linked list whose nodes contain integers and removes all nodes
