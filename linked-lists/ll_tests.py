@@ -6,11 +6,14 @@ class RemoveOddsTests(unittest.TestCase):
     def test_empty_list(self):
         empty_list = LinkedList()
         empty_list.remove_odds()
-        self.assertEqual(empty_list.head, LinkedList().head)
-        self.assertEqual(empty_list.tail, LinkedList().tail)
+        self.assertTrue(empty_list.is_empty())
 
     def test_one_odd_node(self):
-        pass
+        node = Node(3)
+        one_odd_list = LinkedList()
+        one_odd_list.add_node(node)
+        one_odd_list.remove_odds()
+        self.assertTrue(one_odd_list.is_empty())
 
     def test_one_even_node(self):
         pass

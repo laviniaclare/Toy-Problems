@@ -15,6 +15,11 @@ class LinkedList(object):
         self.head = head
         self.tail = tail
 
+    def is_empty(self):
+        if not self.head and not self.tail:
+            return True
+        return False
+
     def add_node(self, node):
         if not self.head:
             self.head = node
@@ -28,6 +33,9 @@ class LinkedList(object):
         while cur:
             print cur.data
             cur = cur.next
+
+    def get_length(self):
+        pass
 
     def remove_odds(self):
         """takes in a linked list whose nodes contain integers and removes all nodes
