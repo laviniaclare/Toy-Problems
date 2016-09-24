@@ -57,9 +57,6 @@ class LinkedList(object):
                 if not cur:
                     self.tail = None
                 continue
-            elif cur == self.head and not cur.data % 2:
-                prev = cur
-                cur = cur.next
 
             if cur and cur.data % 2:
                 prev.next = cur.next
@@ -67,5 +64,6 @@ class LinkedList(object):
                 if not cur:
                     self.tail = prev
 
-            if cur == self.tail:
-                return
+            if cur and not cur.data % 2:
+                prev = cur
+                cur = cur.next

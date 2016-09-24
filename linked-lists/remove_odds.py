@@ -19,6 +19,9 @@ class LinkedList(object):
         self.tail = tail
 
     def remove_odds(self):
+        """takes in a linked list whose nodes contain integers and removes all nodes
+        whose data is odd
+        """
         cur = self.head
 
         while cur:
@@ -28,9 +31,6 @@ class LinkedList(object):
                 if not cur:
                     self.tail = None
                 continue
-            elif cur == self.head and not cur.data % 2:
-                prev = cur
-                cur = cur.next
 
             if cur and cur.data % 2:
                 prev.next = cur.next
@@ -38,5 +38,6 @@ class LinkedList(object):
                 if not cur:
                     self.tail = prev
 
-            if cur == self.tail:
-                return
+            if cur and not cur.data % 2:
+                prev = cur
+                cur = cur.next
