@@ -60,7 +60,14 @@ class RemoveOddsTests(unittest.TestCase):
         self.assertEqual(odd_head.tail.data, 6)
 
     def test_all_even(self):
-        pass
+        all_even = LinkedList()
+        node_vals = [2, 4, 6]
+        for node_val in node_vals:
+            all_even.add_node(Node(node_val))
+
+        all_even.remove_odds()
+        "It should not remove any nodes if all nodes are even"
+        self.assertEqual(all_even.get_length(), 3)
 
     def test_all_odd(self):
         pass
