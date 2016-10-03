@@ -31,7 +31,7 @@ class RemoveOddsTests(unittest.TestCase):
             odd_tail.add_node(Node(node_val))
 
         odd_tail.remove_odds()
-        "it should remove the tail if the tail is odd"
+        "it should remove the tail if the tail is odd and the head is even"
         self.assertEqual(odd_tail.tail.data, 4)
         self.assertEqual(odd_tail.get_length(), 2)
 
@@ -42,15 +42,22 @@ class RemoveOddsTests(unittest.TestCase):
             even_tail.add_node(Node(node_val))
 
         even_tail.remove_odds()
-        "it should remove odds if the tail is even"
+        "it should remove odds if the tail is even and the head is even"
         self.assertEqual(even_tail.tail.data, 10)
         self.assertEqual(even_tail.get_length(), 3)
-
-    def test_head_even(self):
-        pass
+        
 
     def test_head_odd(self):
-        pass
+        odd_head = LinkedList()
+        node_vals = [3, 4, 5, 6]
+        for node_val in node_vals:
+            odd_head.add_node(Node(node_val))
+
+        odd_head.remove_odds()
+        "it should remove odds when the head node is odd and the tail is even"
+        self.assertEqual(odd_head.head.data, 4)
+        self.assertEqual(odd_head.get_length(), 2)
+        self.assertEqual(odd_head.tail.data, 6)
 
     def test_all_even(self):
         pass
