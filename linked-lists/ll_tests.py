@@ -70,7 +70,16 @@ class RemoveOddsTests(unittest.TestCase):
         self.assertEqual(all_even.get_length(), 3)
 
     def test_all_odd(self):
-        pass
+        all_odd = LinkedList()
+        node_vals = [1, 3, 5, 7]
+        for node_val in node_vals:
+            all_odd.add_node(Node(node_val))
+
+        all_odd.remove_odds()
+        "it should remove all nodes if all nodes are odd"
+        self.assertEqual(all_odd.get_length(), 0)
+        self.assertEqual(all_odd.head, None)
+        self.assertEqual(all_odd.tail, None)
 
 
 
