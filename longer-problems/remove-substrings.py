@@ -5,6 +5,8 @@
 #  sdee       (ee)    -> sdee
 #  sdee      (xyz)    -> sdee
 
+# TODO: Clean up code, see if it can be made more efficient
+
 import pdb
 
 def remove_substring(input_string, substring_to_remove):
@@ -16,13 +18,13 @@ def remove_substring(input_string, substring_to_remove):
             return input_string[:i] + input_string[i+substring_length:]
 
 def removeInstances(input_string, items_to_remove):
-    output = ''
+    output = input_string
     for item in items_to_remove:
         item_length = len(item)
         for i in range(len(input_string)):
             substring = input_string[i:i+item_length]
             if substring == item:
-                output = input_string[:i] + input_string[i+substring_length:]
+                output = remove_substring(output, item)
     
     return output
 
