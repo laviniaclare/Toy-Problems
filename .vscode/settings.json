@@ -1,0 +1,8 @@
+{
+    "github.copilot.editor.enableCodeActions": false,
+    "github.copilot.chat.reviewSelection.enabled": false,
+    "github.copilot.chat.startDebugging.enabled": false,
+    "github.copilot.chat.edits.newNotebook.enabled": false,
+    "github.copilot.chat.newWorkspaceCreation.enabled": false,
+    "github.copilot.chat.setupTests.enabled": false
+}
