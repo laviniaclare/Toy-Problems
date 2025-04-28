@@ -1,6 +1,6 @@
 '''Create a function called "fizz_buzz" which takes a number n and prints all the numbers from zero to n, replacing multiples of 3 with the string "Fizz", multiples of 5 with the string "Buzz", and multiples of both 5 and 3 with the string "FizzBuzz".
 
-Example: If n = 15 the funtion should print 1, 2, Fizz, 4, Buzz, 6, 7, 8, 9, Buzz, 11, Fizz, 13, 14, FizzBuzz'''
+Example: If n = 15 the funtion should print 1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz, 11, Fizz, 13, 14, FizzBuzz'''
 
 
 def fizz_buzz(n):
@@ -15,7 +15,7 @@ def fizz_buzz(n):
             output += "Buzz"
         if i % 3 and i % 5:
             output = i
-        print output
+        print(output)
         i += 1
 
 
@@ -30,4 +30,10 @@ def fizz_buzz2(n):
             output += "Buzz"
         if output == "":
             output = num
-        print output
+        print(output)
+
+print("With while loop:")
+fizz_buzz(16)
+print("\n********************\n")
+print("With for loop")
+fizz_buzz2(16)
