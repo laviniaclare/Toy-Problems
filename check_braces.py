@@ -8,9 +8,9 @@ Poorly formed examples: "[{]}]","{{]]", "]()"'''
 def check_braces(expressions):
     for string in expressions:
         if is_balanced(string):
-            print 1
+            print(1)
         else:
-            print 0
+            print(0)
 
 
 def is_balanced(string):
