@@ -14,4 +14,4 @@ def remove_all(data, value):
     return data
 
 
-print remove_all([1, 2, 4, 3, 15, 6, 2, 2], 2)
+print(remove_all([1, 2, 4, 3, 15, 6, 2, 2], 2))
