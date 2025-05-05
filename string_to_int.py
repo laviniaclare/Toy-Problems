@@ -13,5 +13,5 @@ def string_to_int(input_string):
     return output
 
 
-print string_to_int('132')
-print type(string_to_int('132'))
+print(string_to_int('132'))
+print(type(string_to_int('132')))
