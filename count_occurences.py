@@ -22,36 +22,39 @@ def count_occurences(target:int, nums:List[int]) -> int:
     return last_occurence - first_occurence + 1
 
 def find_first_occurence(target, nums):
-    midpoint = len(nums)//2
+    # [1,2,3,7,9,9]
+    left_index = 0
+    right_index = len(nums) - 1
+    target_index = None
 
-    curr_index = midpoint
-    target_seen = False
-    while True:
+    while right_index >= left_index:
+        curr_index = (right_index + left_index)//2
         if nums[curr_index] > target:
-            curr_index -= 1
+            right_index = curr_index - 1
         elif nums[curr_index] < target:
-            if target_seen:
-                return curr_index + 1
-            curr_index += 1
+            left_index = curr_index + 1
         else:
-            target_seen = True
-            curr_index -= 1
+            target_index = curr_index
+            right_index = curr_index - 1
+    return target_index
+
+            
 
 def find_last_occurence(target, nums):
-    midpoint = len(nums)//2
+    left_index = 0
+    right_index = len(nums) - 1
+    target_index = None
 
-    curr_index = midpoint
-    target_seen = False
-    while True:
+    while right_index >= left_index:
+        curr_index = (right_index + left_index)//2
         if nums[curr_index] > target:
-            curr_index -= 1
-            if target_seen:
-                return curr_index
+            right_index = curr_index - 1
         elif nums[curr_index] < target:
-            curr_index += 1
+            left_index = curr_index + 1
         else:
-            target_seen = True
-            curr_index += 1
+            target_index = curr_index
+            left_index = curr_index + 1
+    return target_index
 
 
 if __name__ == '__main__':
