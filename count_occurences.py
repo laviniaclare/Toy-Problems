@@ -60,3 +60,6 @@ if __name__ == '__main__':
 
     print(f'target = {7} and nums = {[1,2,3,7,7,7,9,9]}')
     print("Output is: ", count_occurences(7, [1,2,3,7,7,7,9,9]))
+
+    print(f'target = {7} and nums = {[1,2,3,7,9,9]}')
+    print("Output is: ", count_occurences(7, [1,2,3,7,9,9]))
